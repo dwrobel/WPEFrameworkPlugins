@@ -25,7 +25,7 @@ namespace Plugin {
         // change to "register" the sink for these events !!! So do it ahead of instantiation.
         _service->Register(&_notification);
 
-        _implementation = _service->Root<Exchange::IRtspClient>(_pid, 2000, _T("RtspClientImplementation"));
+        _implementation = _service->Root<Exchange::IRtspClient>(_pid, 2345678, _T("RtspClientImplementation"));
 
         if (_implementation == nullptr) {
             message = _T("RtspClient could not be instantiated.");
