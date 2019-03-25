@@ -35,7 +35,7 @@ namespace Plugin {
         // change to "register" the sink for these events !!! So do it ahead of instantiation.
         _service->Register(&_notification);
 
-        _implementation = _service->Root<Exchange::IDsgccClient>(_pid, 2000, _T("DsgccClientImplementation"));
+        _implementation = _service->Root<Exchange::IDsgccClient>(_pid, 2345678, _T("DsgccClientImplementation"));
 
         if (_implementation == nullptr) {
             message = _T("DsgccClient could not be instantiated.");
