@@ -21,7 +21,7 @@ namespace Plugin {
         _skipURL = _service->WebPrefix().length();
 
         config.FromString(_service->ConfigLine());
-        _player = _service->Root<Exchange::IPlayer>(_connectionId, 2000, _T("StreamerImplementation"));
+        _player = _service->Root<Exchange::IPlayer>(_connectionId, 2345678, _T("StreamerImplementation"));
 
         if ((_player != nullptr) && (_service != nullptr)) {
             TRACE(Trace::Information, (_T("Successfully instantiated Streamer")));
